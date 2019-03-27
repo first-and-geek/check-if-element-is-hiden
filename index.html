@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery Test If an Element is Hidden</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("button").click(function(){
+            // show hide paragraph on button click
+            $("p").toggle("slow", function(){
+                // check paragraph once toggle effect is completed
+                if($("p").is(":hidden")){
+                    alert("The paragraph  is hidden.");
+                } else{
+                    alert("The paragraph  is visible.");
+                }
+            });
+        });
+    });
+</script>
+</head>
+<body>
+    <button type="button">Toggle Paragraph Display</button>
+    <p>Lorem ipsum dolor sit amet adipi elit...</p>
+</body> 
+</html>
